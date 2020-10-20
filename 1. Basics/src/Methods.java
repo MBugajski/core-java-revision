@@ -14,6 +14,11 @@ public class Methods {
 		System.out.println(MyUtils.add10(1));
 		MyUtils.returnSomeJunkWithArgs("50");
 		System.out.println(MyUtils.returnSomeJunkWithArgs("49"));
+		
+		//Using a non-static method
+		MyUtils myVar;
+		myVar = new MyUtils();
+		System.out.println(myVar.add5(4));
 	}
 
 	public static void printSomeJunk() {
