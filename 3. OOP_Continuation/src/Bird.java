@@ -1,13 +1,6 @@
 
-public class Bird extends Animal {
-
-	public Bird(int age, char sex, int weight) {
-		super(age, sex, weight);
-	}
-
-	public void move() {
-		System.out.println("Flying...");
-	}
-	
-	
+public class Bird {
+public void fly() {
+	System.out.println("Flying...");
+}
 }

@@ -1,13 +1,8 @@
 
-public class Mammal extends Animal{
-	
-	public Mammal(int age, char sex, int weight) {
-		super(age, sex, weight);
-	}
-
+public class Mammal {
 	// I by now realized that mammals can also both swim and fly, same for birds,
 	// but let's not dwell on that.
-	public void move() {
+	public void walk() {
 		System.out.println("Walking...");
 	}
 }

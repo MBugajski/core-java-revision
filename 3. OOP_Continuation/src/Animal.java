@@ -18,8 +18,4 @@ public class Animal {
 	public void sleep() {
 		System.out.println("Sleeping...");
 	}
-	
-	public void move() {
-		System.out.println("Moving...");
-	}
 }
