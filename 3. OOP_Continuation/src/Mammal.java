@@ -8,6 +8,6 @@ public class Mammal extends Animal{
 	// I by now realized that mammals can also both swim and fly, same for birds,
 	// but let's not dwell on that.
 	public void move() {
-		System.out.println("Walking...");
+		System.out.println("A " + this.getClass().getName().toLowerCase() + " is walking...");
 	}
 }

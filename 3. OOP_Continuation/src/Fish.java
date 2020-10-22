@@ -1,5 +1,5 @@
 
-public class Fish extends Animal {
+public class Fish extends Animal implements Tasty{
 
 	public Fish(int age, char sex, int weight) {
 		super(age, sex, weight);
@@ -8,4 +8,5 @@ public class Fish extends Animal {
 	public void move() {
 		System.out.println("Swimming...");
 	}
+
 }
