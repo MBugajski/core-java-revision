@@ -16,7 +16,7 @@ public class Application {
 		try {
 			File file = new File("myfile.txt");
 			Scanner input2 = new Scanner(file);
-			while(input2.hasNextLine()) {
+			while (input2.hasNextLine()) {
 				String line = input2.nextLine();
 				System.out.println(line);
 			}
@@ -25,7 +25,7 @@ public class Application {
 			System.out.println("File not found");
 			e.printStackTrace();
 		}
-		
+
 		MyFileUtils myFileUtils = new MyFileUtils();
 		try {
 			myFileUtils.subtract10FromLargerNumber(9);
@@ -33,8 +33,7 @@ public class Application {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 }
