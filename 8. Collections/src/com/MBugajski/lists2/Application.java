@@ -9,7 +9,7 @@ public class Application {
 	public static void main(String[] args) {
 		ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
 		vehicles.add(new Vehicle("Ford", "Focus", 500, false));
-		vehicles.add(new Vehicle("Fiat", "126", 100, false));
+		vehicles.add(1, new Vehicle("Fiat", "126", 100, false));
 		vehicles.add(new Vehicle("Porshe", "Carrera", 55500, false));
 		vehicles.add(new Vehicle("Toyota", "Camery", 4000, true));
 
