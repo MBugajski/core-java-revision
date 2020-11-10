@@ -1,6 +1,5 @@
 package com.MBugajski.lambdas;
 
-import com.sun.net.httpserver.Authenticator.Result;
 
 public class Application {
 	public static void main(String[] args) {

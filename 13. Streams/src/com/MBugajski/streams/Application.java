@@ -36,26 +36,35 @@ public class Application {
 				.forEach(x -> System.out.print(x + ", "));
 		System.out.println();
 
-		
 		Stream<String> lines = Files.lines(Paths.get("files/wordFile.txt"));
 		lines.filter(x -> x.length() > 6).sorted().forEach(x -> System.out.print(x + ", "));
 		lines.close();
 		System.out.println();
-		
-		List<String> words = Files.lines(Paths.get("files/wordFile.txt")).filter(x -> x.contains("th")).collect(Collectors.toList());
+
+		List<String> words = Files.lines(Paths.get("files/wordFile.txt")).filter(x -> x.contains("th"))
+				.collect(Collectors.toList());
 		words.forEach(x -> System.out.print(x + ", "));
 		System.out.println();
-		
+
 		Stream<String> rows = Files.lines(Paths.get("files/stockDataCsv.txt"));
 		int rowCount = (int) rows.map(x -> x.split(",")).filter(x -> x.length > 3).count();
 		System.out.println(rowCount + " good rows");
 		rows.close();
 
 		Stream<String> rows2 = Files.lines(Paths.get("files/stockDataCsv.txt"));
-		rows2.map(x -> x.split(",")).filter(x -> x.length > 3).filter(x -> Integer.parseInt(x[1].trim()) > 15).forEach(x -> System.out.println(x[0].trim() + " " + x[2].trim() + " " +x[3].trim()));
+		rows2.map(x -> x.split(",")).filter(x -> x.length > 3).filter(x -> Integer.parseInt(x[1].trim()) > 15)
+				.forEach(x -> System.out.println(x[0].trim() + " " + x[2].trim() + " " + x[3].trim()));
+		System.out.println();
 		rows2.close();
-		
-		
-		
+
+		Stream<String> rows3 = Files.lines(Paths.get("files/stockDataCsv.txt"));
+		rows3.map(x -> x.split(",")).forEach(x -> System.out.print(Arrays.toString(x) + " "));
+		System.out.println();
+		rows3.close();
+
+		Stream<String> rows4 = Files.lines(Paths.get("files/stockDataCsv.txt"));
+		rows4.map(x -> x.split(",")).forEach(x -> Arrays.asList(x).forEach(y -> System.out.print(y + " ")));
+		rows4.close();
+
 	}
 }
