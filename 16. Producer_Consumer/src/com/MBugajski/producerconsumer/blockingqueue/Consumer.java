@@ -18,7 +18,7 @@ public class Consumer implements Runnable {
 				System.out.println("ANSWERED QUESTION: " + questionQueue.take());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-			} 
+			}
 		}
 	}
 
