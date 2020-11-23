@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class JDBCApplication {
 	public static void main(String[] args) {
 
-		String url = "jdbc:mysql://127.0.0.1:3306/employees_database";
+		String url = "jdbc:mysql://127.0.0.1:3306/employees_database?serverTimezone=Europe/Amsterdam";
 		int rowsAffected;
 		try {
 			// Establish connection
@@ -20,7 +20,7 @@ public class JDBCApplication {
 
 			// Execute statements
 			rowsAffected = statement.executeUpdate(
-					"INSERT INTO employees_tbl(id, name, debt, salary) values (800, 'Juliet', 'Sales', 5500");
+					"INSERT INTO employees_tbl(id, name, dept, salary) values (800, 'Juliet', 'Sales', 5500)");
 
 			System.out.println("Executed an Insert statement = Rows Affected: " + rowsAffected);
 			
@@ -32,7 +32,7 @@ public class JDBCApplication {
 			
 			System.out.println("Executed an Update statement = Rows Affected: " + rowsAffected);
 
-			ResultSet resultSet = statement.executeQuery("select from employees_tbl");
+			ResultSet resultSet = statement.executeQuery("SELECT * from employees_tbl");
 
 			// Process the result
 			int salaryTotal = 0;
@@ -43,7 +43,7 @@ public class JDBCApplication {
 			System.out.println("Total salary payments equal " + salaryTotal);
 
 		} catch (SQLException e) {
-			System.err.println("Error while Insertion");
+			System.err.println("Error while Insertion: " + e);
 		}
 	}
 }
