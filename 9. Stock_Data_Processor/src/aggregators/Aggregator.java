@@ -7,11 +7,11 @@ public abstract class Aggregator {
 	
 	List<Double> numbers;
 	
-	public Aggregator(){
+	protected Aggregator(){
 		numbers = new ArrayList<Double>();
 	}
 	
-	public Aggregator(List<Double> numbers){
+	protected Aggregator(List<Double> numbers){
 		numbers = new ArrayList<Double>(numbers);
 	}
 	
